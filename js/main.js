@@ -9,8 +9,8 @@ var CHART_WIDTH = 500;
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 
-  if (screenWidth < 680) {
-    CHART_WIDTH = 100
+  if (screenWidth < 900) {
+    CHART_WIDTH = 0
   }
   else {
     CHART_WIDTH = 500
@@ -22,8 +22,9 @@ var CUTOFF = 35; // Update cutoff
 var height = 390;
 var padding = 40;
 var middlePadding = (padding * 2) + 100;
-var width = $(window).width() - middlePadding - CHART_WIDTH - 30;
 
+var width = $(window).width() - middlePadding - CHART_WIDTH;
+console.log(window.width)
 var episodes = [1, 2, 4];
 var totalData;
 var dFirst;
@@ -38,6 +39,7 @@ var colors = {
 };
 
 // Set up plot
+
 var svg = d3.select("#plot2").append("svg")
     .attr("class", "axis")
     .attr("height", height + padding * 2)
