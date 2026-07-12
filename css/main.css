@@ -116,7 +116,9 @@ path.ranking {
   margin-top: -20px;
   margin-left: auto;
   margin-right: auto;
-  height: 160px; }
+  height: 160px; 
+  display: flex;
+}
   #profile #picWrapper {
     float: left;
     width: 180px; }
